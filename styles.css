@@ -98,6 +98,12 @@ figcaption { color: var(--muted); font-size: .76rem; line-height: 1.5; margin-to
 .screenshot img { border: 1px solid var(--line); border-radius: 16px; width: 100%; }
 .screenshot-pair { display: grid; grid-template-columns: 1fr 1fr; align-items: start; gap: 22px; margin-block: 26px; }
 .screenshot-pair .screenshot { margin: 0; }
+.history-layouts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-block: 26px; }
+.history-layouts .screenshot { margin: 0; }
+.history-layouts h4 { margin: 0 0 10px; font-size: 1rem; line-height: 1.35; }
+.history-layouts a { display: block; border-radius: 16px; }
+.history-layouts img { aspect-ratio: 402 / 520; object-fit: cover; object-position: top; }
+.history-layouts figcaption { font-size: .88rem; }
 .data-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: .92rem; }
 .data-table th, .data-table td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
 .data-table th { background: var(--sage); font-weight: 600; }
@@ -135,6 +141,9 @@ details p:last-child { margin-bottom: 0; }
     .feature { gap: 40px; }
     .guide-layout { grid-template-columns: 180px minmax(0, 1fr); gap: 32px; }
     .support-layout { gap: 32px; }
+}
+@media screen and (max-width: 1000px) {
+    .history-layouts { grid-template-columns: minmax(0, 330px); gap: 26px; }
 }
 @media (max-width: 680px) {
     .container { width: calc(100% - 36px); }
